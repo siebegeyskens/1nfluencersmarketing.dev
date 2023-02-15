@@ -1,0 +1,40 @@
+button#scroll-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+div#scroll-animation {
+    font-size: 1.6rem;
+  box-sizing: border-box;
+  /* em = 16px */
+  height: 3.31em;
+  width: 1.98em;
+  border: 0.1em solid #ffffff;
+  border-radius: 1em;
+  position: relative;
+  float: right;
+  margin-left: 1.13em;
+}
+div#scroll-animation::before {
+  position: absolute;
+  content: "";
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0.88em;
+  height: 0.56em;
+  width: 0.56em;
+  background-color: var(--white);
+  border-radius: 50%;
+  animation: move-down 2s infinite;
+}
+@keyframes move-down {
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(1em);
+    opacity: 0;
+  }
+}

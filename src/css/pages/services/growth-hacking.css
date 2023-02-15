@@ -1,0 +1,7 @@
+/* ------------------ */
+/* gradient background */
+/* ------------------ */
+
+body#growth-hacking.background {
+  background: linear-gradient(#cec3e9, #f4f2f9);
+}

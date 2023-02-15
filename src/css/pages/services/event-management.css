@@ -1,0 +1,7 @@
+/* ------------------ */
+/* gradient background */
+/* ------------------ */
+
+body#event-management.background {
+  background: linear-gradient(#c3c7ee, #f3f3fa);
+}

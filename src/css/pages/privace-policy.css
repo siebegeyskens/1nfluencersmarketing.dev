@@ -1,0 +1,61 @@
+body#privacy-policy main {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+body#privacy-policy div.container {
+max-width: 600px;
+/* dissable margin collapse */
+display: flex;
+flex-direction: column;
+}
+
+body#privacy-policy div.privacy-section {
+    border-bottom: 1px solid #4a417420;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+body#privacy-policy h1 {
+    font-family: "Novera-Classic";
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 77%;
+    margin-bottom: 1em;
+    color: var(--purpleHaze);
+}
+
+body#privacy-policy h2 {
+    font-family: "Novera-Classic";
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 77%;
+    margin: 0.8em 0 0.5em;
+    color: var(--purpleHaze);
+}
+
+body#privacy-policy h3 {
+    font-family: "Novera-Classic";
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 77%;
+    margin: 2em 0 0.5em;
+    color: var(--purpleHaze);
+}
+
+body#privacy-policy span.bold {
+    font-weight: bold;
+    color: var(--purpleHaze);
+}
+
+body#privacy-policy a#mail-legal {
+    color: var(--purpleHaze);
+    text-decoration: underline;
+}
+
+body#privacy-policy footer {
+position: static;
+}

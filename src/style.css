@@ -1,0 +1,35 @@
+/* Base: 
+--------------------------------*/
+/* all basic settings throughout the whole page */
+/* fonts, headings, ... */
+
+@import url(./css/base/reset.css);
+@import url(./css/base/typography.css);
+
+/* components: 
+--------------------------------*/
+/* Ui components */
+/* buttons, ... */
+
+@import url(./css/components/buttons.css);
+@import url(./css/components/navigation.css);
+@import url(./css/components/scrollButton.css);
+@import url(./css/components/spinner.css);
+
+/* layout: 
+--------------------------------*/
+/* subdivision of the page, this comes back on multiple pages */
+/* this decides a big part of the layout on each page */
+/* grid, header, footer, ... */
+
+@import url(./css/layout/header.css);
+@import url(./css/layout/footer.css);
+
+/* pages: 
+--------------------------------*/
+/* longest css pages, structure chronologically according to html */
+/* grid, header, footer, ... */
+
+@import url(./css/pages/index.css);
+@import url(./css/pages/services.css);
+@import url(./css/pages/privace-policy.css);

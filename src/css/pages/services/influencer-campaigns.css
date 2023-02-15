@@ -1,0 +1,7 @@
+/* ------------------ */
+/* gradient background */
+/* ------------------ */
+
+body#influencer-campaigns.background {
+  background: linear-gradient(#bfd0e7, #f2f6fa);
+}

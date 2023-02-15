@@ -1,0 +1,52 @@
+/* ------------- */
+/* about-section */
+/* ------------- */
+section#about-section {
+  /* extra padding on the left = layout fix */
+  padding-left: 14.48vw;
+}
+
+#about-heading-container {
+  width: auto;
+}
+
+#about-section h2 {
+  text-align: left;
+  margin-top: 5vh;
+}
+
+#about-section h3 {
+  top: 55%;
+  right: 6%;
+  text-align: right;
+  color: var(--purpleHaze);
+}
+
+#about-section h4 {
+  margin: 1em 0;
+}
+
+div.pillars-container {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  bottom: 18vh;
+  position: absolute;
+}
+
+div.pillar-container {
+  width: 14.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+@media only screen and (max-height: 800px) {
+  div.pillars-container {
+    bottom: 10vh;
+  }
+
+  #about-section h2 {
+    margin-top: -5vh;
+  }
+}

@@ -1,0 +1,104 @@
+.top-nav {
+  position: relative;
+}
+
+.top-nav > ul {
+  width: 685px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-nav #arrow-drop-down {
+  vertical-align: middle;
+  margin-top: -0.3em;
+}
+
+.top-nav #arrow-drop-down.dark {
+  color: var(--purpleHaze);
+}
+
+.dropdown-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  width: 395px;
+  background-color: var(--white);
+  left: 0;
+  top: 38px;
+  border-radius: 28px;
+  padding: 2.1rem 0;
+  align-items: center;
+  z-index: 10;
+}
+
+.dropdown-container.services {
+  border-radius: 0 0 28px 28px;
+}
+
+.dropdown-container.hidden {
+  display: none;
+}
+
+.dropdown-container a {
+  font-size: 2rem;
+  color: var(--purpleHaze);
+  font-family: "Novera-modern";
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.dropdown-container ul li:first-child a {
+  margin-top: 0;
+  color: #9b9b9b;
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+
+.dropdown-container ul li:last-child a {
+  margin-bottom: 0;
+}
+
+.dropdown-container #all-services-btn {
+  cursor: pointer;
+}
+
+/* add extra top so the hover covers this */
+.dropdown-container::before {
+  content: "";
+  height: 39px;
+  width: 100%;
+  position: absolute;
+  top: -19px;
+  left: 0;
+}
+
+/* hide not current images */
+.dropdown-container .dropdown-img.hidden {
+  display: none;
+}
+
+/* style selcted link */
+.dropdown-container a:hover {
+  opacity: 0.7;
+}
+
+/* style current link */
+.dropdown-container a.current {
+  opacity: 0.7;
+  cursor: default;
+}
+
+@media only screen and (max-width: 1366px) {
+  .dropdown-container {
+    width: 317px;
+  }
+
+  .dropdown-container img {
+    width: 70px;
+    height: auto;
+  }
+
+  .top-nav > ul {
+    width: 567px;
+  }
+}

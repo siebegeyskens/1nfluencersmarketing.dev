@@ -1,0 +1,79 @@
+footer {
+  height: 326px;
+  padding: 77px 14.47vw 69px;
+  background-color: var(--purpleHaze);
+  display: flex;
+  justify-content: space-between;
+  font-family: "Novera-Modern";
+  box-sizing: border-box;
+}
+
+/* temporary fix for footer layout */
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100vh;
+}
+
+section#contact-section {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+img#footer-logo {
+  position: relative;
+  transform: translateY(-29px);
+}
+
+footer h5 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+footer li {
+  font-size: 1.7rem;
+  font-weight: normal;
+  line-height: 1.9em;
+}
+
+footer li a,
+footer li p {
+  color: var(--white);
+}
+
+footer li p {
+  display: inline-block;
+}
+
+footer li {
+  vertical-align: center;
+}
+
+footer #contact-container a {
+  display: flex;
+  align-items: center;
+}
+
+footer #contact-container p {
+  margin-left: 0.7em;
+}
+
+div.social {
+  margin-top: 25px;
+  float: right;
+  padding-left: 6.25vw;
+  padding-top: 25px;
+  border-top: 1px solid #f9f9f950;
+}
+
+div.social a:last-child {
+  margin-left: 11px;
+}
+
+ul#contact-container span,
+ul#contact-container img {
+  color: var(--blueHaze);
+}

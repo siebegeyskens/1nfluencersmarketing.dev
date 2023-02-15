@@ -1,0 +1,51 @@
+/* ------------- */
+/* home-section */
+/* ------------- */
+
+.home-section {
+  /* put everything in home section above webgl */
+  z-index: 1000;
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-section .intro {
+  text-align: center;
+}
+
+.home-section h2#subheading {
+  font-size: 2.8rem;
+  font-family: "Novera-Modern";
+  font-weight: 300;
+  line-height: 1.07;
+}
+
+div.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.clients {
+  width: 56.66vw;
+  height: 50px;
+  /* .clients {
+    width: 100px;
+    height: 40px;
+} */
+}
+
+.clients img {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  div.clients  {
+    /* width: 56.66vw; */
+    height: 40px;
+  }
+}
+
+

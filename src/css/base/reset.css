@@ -1,0 +1,87 @@
+/* ------------------ */
+/* resets */
+/* ------------------ */
+/* svg */
+
+/* REM reset */
+/* 62.5% of 16px = 10px */
+/* 1rem = 10px */
+:root {
+  font-size: 62.5%;
+  --white: #f9f9f9;
+  --black: #303030;
+  --purpleHaze: #4a4174;
+  --dropShadow: #3f347220;
+  --blueHaze: #c3bbe9;
+  user-select: none;
+  letter-spacing: 0.01px;
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+/* element reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: var(--white);
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+}
+
+/* ------------------ */
+/* headings */
+/* ------------------ */
+
+h1 {
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  font-size: 9rem;
+  line-height: 77%;
+  margin-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 6rem;
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  line-height: 1.17em;
+}
+
+h4 {
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: var(--purpleHaze);
+}
+
+p {
+  font-family: "Novera-modern";
+  font-weight: normal;
+  font-size: 1.7rem;
+  line-height: 1.29em;
+  color: var(--black);
+}

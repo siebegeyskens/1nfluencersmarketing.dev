@@ -1,0 +1,7 @@
+/* ------------------ */
+/* gradient background */
+/* ------------------ */
+
+body#free-influencers.background {
+  background: linear-gradient(#cdc8ee, #F2F2F9);
+}

@@ -1,0 +1,106 @@
+/* ------------- */
+/* services-section */
+/* ------------- */
+
+#services-section h3 {
+  top: 0;
+}
+
+/* nav.services-navigation {
+  z-index: 1000;
+  position: absolute;
+  width: 30vw;
+  left: 50%;
+  top: 59%;
+  transform: translateX(-50%) translateY(-50%);
+} */
+
+/* position nav buttons */
+/* cant be in a container bc then they block the link underneath */
+
+/* 0.33 * 0.4 */
+
+button.services-nav-btn {
+  position: absolute;
+  z-index: 1000;
+  top: 59%;
+}
+
+button.services-nav-btn#next-item {
+  right: 37vw;
+  transform: translateX(50%)  ;
+}
+
+button.services-nav-btn#previous-item {
+  position: absolute;
+  left: 37vw;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+button.services-nav-btn > span {
+  vertical-align: middle;
+}
+
+nav.progress-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6.76vh;
+}
+
+.progress-dot {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--white);
+  border-image: none;
+  border-radius: 100%;
+  width: 1.2rem;
+  height: 1.2rem;
+
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.progress-dots .current {
+  background-color: var(--white);
+}
+
+.service-title {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  opacity: 75%;
+  color: inherit;
+  text-decoration: none;
+  left: 50%;
+  text-align: center;
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.service-title:hover {
+  opacity: 100%;
+}
+
+/*
+  .service-title:hover::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--white);
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      cursor: pointer;
+  }
+  */
+
+.current-service-title {
+  opacity: 100%;
+  font-size: 6rem;
+}

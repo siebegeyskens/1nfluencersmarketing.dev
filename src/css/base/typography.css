@@ -1,0 +1,59 @@
+/* ------------------ */
+/* custom font
+/* ------------------ */
+
+@font-face {
+  font-family: "Novera-Modern";
+  src: url("../../../static/fonts/Novera-ModernRegular.otf");
+  font-weight: normal;
+  /* normal = 400 */
+}
+
+@font-face {
+  font-family: "Novera-Modern";
+  src: url("../../../static/fonts/Novera-ModernBold.otf");
+  font-weight: bold;
+  /* bold = 800 */
+}
+
+@font-face {
+  font-family: "Novera-Modern";
+  src: url("../../../static/fonts/Novera-ModernLight.otf");
+  font-weight: 300;
+  /* light = 300 */
+}
+
+@font-face {
+  font-family: "Novera-Classic";
+  src: url("../../../static/fonts/Novera-ClassicBold.otf");
+  font-weight: bold;
+  /* bold = 700 */
+}
+
+@font-face {
+  font-family: "Novera-Classic";
+  src: url("../../../static/fonts/Novera-ClassicExtraBold.otf");
+  font-weight: 800;
+  /* extrabold = 800 */
+}
+
+@font-face {
+  font-family: "Novera-Classic";
+  src: url("../../../static/fonts/Novera-ClassicRegular.otf");
+  font-weight: normal;
+  /* extrabold = 800 */
+}
+
+/* ------------------ */
+/* google icons
+/* ------------------ */
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+table span.material-symbols-outlined.check{
+  font-variation-settings:  "wght" 500;
+}
+table span.material-symbols-outlined:not(.check){
+  font-variation-settings:  "wght" 200;
+}

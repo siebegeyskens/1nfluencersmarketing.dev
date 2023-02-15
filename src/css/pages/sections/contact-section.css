@@ -1,0 +1,280 @@
+/* ------------- */
+/* general */
+/* ------------- */
+
+#contact-section {
+  z-index: 1000;
+  padding: 0 14.48vw;
+}
+
+#contact-section h2 {
+  color: #d5d0f9;
+  margin-top: 7vh;
+}
+
+#contact-section h3 {
+  top: -2%;
+  color: var(--purpleHaze);
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* absolute position requires giving the element a widht */
+  /* give it the widht of 100% minus the padding (the margin) */
+  width: calc(100% - 14.48vw - 14.48vw);
+  position: absolute;
+  bottom: 13vh;
+}
+
+/* ------------- */
+/* form */
+/* ------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 43.13vw;
+  padding-right: 15.21vw;
+  border-right: 1px solid #4a417450;
+  font-family: "Novera-Modern";
+  font-size: 1.7rem;
+  box-sizing: border-box;
+  /* z-index: 10000; */
+}
+
+/* pure css inputs 
+------------------------*/
+
+label {
+  color: var(--black);
+  margin-bottom: 4rem;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid var(--purpleHaze);
+  position: relative;
+}
+
+input {
+  width: 100%;
+  /* padding: 0.89em 0px; */
+  /* margin-top: 1.11em; */
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding-bottom: 0.2rem;
+  font-weight: bold;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--purpleHaze);
+}
+
+input::placeholder {
+  opacity: 0%;
+}
+
+span.floating-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-duration: 300ms;
+  font-weight: normal; /*400*/
+}
+
+/* floating label: floats and small */
+label:focus-within > span.floating-label,
+input:not(:placeholder-shown) + span.floating-label {
+  color: var(--purpleHaze);
+  transform: translateY(-2rem);
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* custom select 
+---------------------------*/
+
+div.select-container {
+  position: relative;
+  margin-bottom: 4rem;
+  margin-top: 1.5rem;
+}
+
+div.select-placeholder {
+  border-bottom: 1px solid var(--purpleHaze);
+  padding-bottom: 0.2em;
+  cursor: pointer;
+}
+
+p#placeholder-text {
+  /* font-family: "Novera-Modern"; */
+  font-weight: normal; /*400*/
+  color: var(--black);
+  display: inline-block;
+  /* font-size: 1.7rem; */
+}
+
+/* when placeholder is filled in by FormSelect.js */
+#placeholder-text.option-selected {
+  font-weight: bold;
+  color: var(--purpleHaze);
+  /* font-size: 1.7rem; */
+}
+
+/* arrow */
+div.select-placeholder > span {
+  font-size: 2.4rem;
+  float: right;
+  color: var(--purpleHaze);
+  vertical-align: middle;
+}
+
+div.select-options-container {
+  /* font-size: 1.7rem; */
+  background-color: white;
+  padding: 0.85em 1.25em;
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0 0 20px 20px;
+}
+
+/* removed and added with FormSelect.js */
+div.select-options-container.hidden {
+  display: none;
+}
+
+div.select-option {
+  color: var(--purpleHaze);
+  font-weight: bold;
+  margin: 0.75em 0;
+  cursor: pointer;
+  position: relative;
+}
+
+/* added and removed by FormSelect.js */
+div.select-option.selected::before {
+  content: "✔";
+  margin-right: 0.5em;
+}
+
+#select-floating-label {
+  top: -2rem;
+  color: var(--purpleHaze);
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* add and remove with FormSelect.js */
+#select-floating-label.hidden {
+  display: none;
+}
+
+/* textarea 
+----------------------*/
+
+textarea#message {
+  width: 100%;
+  border: none;
+  background: none;
+  height: 4rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  color: var(--purpleHaze);
+}
+
+textarea#message::placeholder {
+  font-weight: normal; /*400*/
+  color: var(--black);
+  /* font-size: 1.7rem; */
+}
+
+#message-floating-label {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  color: var(--purpleHaze);
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* added and removed by TextArea.js */
+#message-floating-label.hidden {
+  display: none;
+}
+
+/* submit 
+----------------------*/
+input#form-submit {
+  width: 260px;
+}
+
+/* ------------- */
+/* buttons */
+/* ------------- */
+
+.contact-btn-container {
+  width: 20.73vw;
+  box-sizing: border-box;
+  flex-grow: 0.7;
+  max-width: 380px;
+}
+
+.contact-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-btn:first-child {
+  margin-bottom: 4vw;
+}
+
+.contact-btn-text-container {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-btn-text-container h4 {
+  margin-bottom: 0.6em;
+}
+
+span.contact-btn-arrow {
+  color: var(--purpleHaze);
+}
+
+/* @media only screen and (max-width: 1920px) {
+  :root {
+    font-size: 50%
+  }
+} */
+
+@media only screen and (max-aspect-ratio: 1920 / 800) {
+  /* @media only screen and (max-height: 700px) { */
+  /* #contact-section h3 {
+    top: -22%;
+    font-size: 3vw;
+  } */
+}
+
+@media only screen and (max-height: 800px) {
+  .contact-wrapper {
+    bottom: 4vh;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  #contact-section h3 {
+    font-size: 20px;
+    top: 20px;
+  }
+  #contact-section.section-heading-container {
+    display: static;
+  }
+}

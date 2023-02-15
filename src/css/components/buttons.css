@@ -1,0 +1,125 @@
+/* ----------------------------- */
+/* normal button
+/* ----------------------------- */
+
+.button-normal {
+  font-family: "Novera-Modern", sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  cursor: pointer;
+}
+
+/* ----------------------------- */
+/* normal button - dark
+/* ----------------------------- */
+
+.button-normal.dark {
+  color: var(--purpleHaze);
+}
+
+/* ----------------------------- */
+/* border button
+/* ----------------------------- */
+
+.button-border {
+  font-family: "Novera-Modern", sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1.5px solid var(--white);
+  border-radius: 28px;
+  padding: 1.1em 3em;
+  cursor: pointer;
+}
+
+/* hover
+----------------------*/
+
+.button-border:hover {
+  color: var(--purpleHaze);
+  background-color: var(--white);
+  filter: drop-shadow(0 4px 15px var(--dropShadow));
+}
+
+/* ----------------------------- */
+/* border button - dark
+/* ----------------------------- */
+
+.button-border.dark {
+  color: var(--purpleHaze);
+  border: 1.5px solid var(--purpleHaze);
+}
+
+/* hover
+----------------------*/
+
+.button-border.dark:hover {
+  color: var(--white);
+  background-color: var(--purpleHaze);
+}
+
+/* ----------------------------- */
+/* underline on hover
+/* ----------------------------- */
+
+.underline:hover::after {
+  /* content: "";
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--white);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 38px; */
+}
+
+/* ----------------------------- */
+/* circle nav buttons
+/* ----------------------------- */
+
+.services-nav-btn {
+  border: 0.2em solid var(--white);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.services-nav-btn:hover {
+  color: var(--purpleHaze);
+  background-color: var(--white);
+  filter: drop-shadow(0 4px 15px var(--dropShadow));
+}
+
+.services-nav-btn.hidden {
+  display: none;
+}
+
+/* ----------------------------- */
+/* to-top-button
+/* ----------------------------- */
+
+button#to-top-btn {
+  position: fixed;
+  right: 7.29vw;
+  bottom: 100px;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(#aa80ff, #808cff);
+  border-radius: 8px;
+  bottom: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button#to-top-btn > span {
+  color: var(--white);
+}
+
+button#to-top-btn.hidden {
+  display: none;
+}
