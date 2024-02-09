@@ -24,28 +24,27 @@ export default class Resources extends EventEmitter {
         // console.log("loaded!")
         document.getElementById("loader").classList.add("hidden");
         this.listenToAnchorLinks.init();
-      }, 
+      },
       // on progress
       () => {
         // console.log("progress!")
       }
     );
 
-
     this.setLoaders();
     this.startLoading();
-
-
   }
 
   setLoaders() {
     this.loaders = {};
     this.loaders.gltfLoader = new GLTFLoader(this.loadingManager);
     const dracoLoader = new DRACOLoader(this.loadingManager);
-    dracoLoader.setDecoderPath("/draco/");
+    dracoLoader.setDecoderPath("siebegeyskens.github.io/draco/");
     this.loaders.gltfLoader.setDRACOLoader(dracoLoader);
     this.loaders.textureLoader = new THREE.TextureLoader(this.loadingManager);
-    this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader(this.loadingManager);
+    this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader(
+      this.loadingManager
+    );
   }
 
   startLoading() {
@@ -54,7 +53,7 @@ export default class Resources extends EventEmitter {
       if (source.type === "gltfModel") {
         this.loaders.gltfLoader.load(source.path, (file) => {
           this.sourceLoaded(source, file);
-        })
+        });
       } else if (source.type === "texture") {
         this.loaders.textureLoader.load(source.path, (file) => {
           this.sourceLoaded(source, file);
