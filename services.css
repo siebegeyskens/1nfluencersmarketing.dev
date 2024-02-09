@@ -1,6 +1,7 @@
 /* ------------------ */
 /* resets */
 /* ------------------ */
+/* svg */
 
 /* REM reset */
 /* 62.5% of 16px = 10px */
@@ -1329,6 +1330,10 @@ table th:not(.big) {
 table th.big {
   font-size: 2.8rem;
   padding: 0.5em 0;
+}
+
+table th.big a {
+  color: var(--purpleHaze);
 }
 
 thead {
