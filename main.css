@@ -1,0 +1,1475 @@
+/* ------------------ */
+/* resets */
+/* ------------------ */
+
+/* REM reset */
+/* 62.5% of 16px = 10px */
+/* 1rem = 10px */
+:root {
+  font-size: 62.5%;
+  --white: #f9f9f9;
+  --black: #303030;
+  --purpleHaze: #4a4174;
+  --dropShadow: #3f347220;
+  --blueHaze: #c3bbe9;
+  user-select: none;
+  letter-spacing: 0.01px;
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+/* element reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: var(--white);
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+}
+
+/* ------------------ */
+/* headings */
+/* ------------------ */
+
+h1 {
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  font-size: 9rem;
+  line-height: 77%;
+  margin-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 6rem;
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  line-height: 1.17em;
+}
+
+h4 {
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: var(--purpleHaze);
+}
+
+p {
+  font-family: "Novera-modern";
+  font-weight: normal;
+  font-size: 1.7rem;
+  line-height: 1.29em;
+  color: var(--black);
+}
+
+/* ------------------ */
+/* custom font
+/* ------------------ */
+
+@font-face {
+  font-family: "Novera-Modern";
+  src: url(43487c2682e3029b.otf);
+  font-weight: normal;
+  /* normal = 400 */
+}
+
+@font-face {
+  font-family: "Novera-Modern";
+  src: url(084bb3f11305f981.otf);
+  font-weight: bold;
+  /* bold = 800 */
+}
+
+@font-face {
+  font-family: "Novera-Modern";
+  src: url(d5b03ef0403f46bf.otf);
+  font-weight: 300;
+  /* light = 300 */
+}
+
+@font-face {
+  font-family: "Novera-Classic";
+  src: url(1196a0aba16fcc51.otf);
+  font-weight: bold;
+  /* bold = 700 */
+}
+
+@font-face {
+  font-family: "Novera-Classic";
+  src: url(3160920c0dd9311c.otf);
+  font-weight: 800;
+  /* extrabold = 800 */
+}
+
+@font-face {
+  font-family: "Novera-Classic";
+  src: url(79c0378076c6d899.otf);
+  font-weight: normal;
+  /* extrabold = 800 */
+}
+
+/* ------------------ */
+/* google icons
+/* ------------------ */
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+table span.material-symbols-outlined.check{
+  font-variation-settings:  "wght" 500;
+}
+table span.material-symbols-outlined:not(.check){
+  font-variation-settings:  "wght" 200;
+}
+
+/* ----------------------------- */
+/* normal button
+/* ----------------------------- */
+
+.button-normal {
+  font-family: "Novera-Modern", sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  cursor: pointer;
+}
+
+/* ----------------------------- */
+/* normal button - dark
+/* ----------------------------- */
+
+.button-normal.dark {
+  color: var(--purpleHaze);
+}
+
+/* ----------------------------- */
+/* border button
+/* ----------------------------- */
+
+.button-border {
+  font-family: "Novera-Modern", sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1.5px solid var(--white);
+  border-radius: 28px;
+  padding: 1.1em 3em;
+  cursor: pointer;
+}
+
+/* hover
+----------------------*/
+
+.button-border:hover {
+  color: var(--purpleHaze);
+  background-color: var(--white);
+  filter: drop-shadow(0 4px 15px var(--dropShadow));
+}
+
+/* ----------------------------- */
+/* border button - dark
+/* ----------------------------- */
+
+.button-border.dark {
+  color: var(--purpleHaze);
+  border: 1.5px solid var(--purpleHaze);
+}
+
+/* hover
+----------------------*/
+
+.button-border.dark:hover {
+  color: var(--white);
+  background-color: var(--purpleHaze);
+}
+
+/* ----------------------------- */
+/* underline on hover
+/* ----------------------------- */
+
+.underline:hover::after {
+  /* content: "";
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--white);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 38px; */
+}
+
+/* ----------------------------- */
+/* circle nav buttons
+/* ----------------------------- */
+
+.services-nav-btn {
+  border: 0.2em solid var(--white);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.services-nav-btn:hover {
+  color: var(--purpleHaze);
+  background-color: var(--white);
+  filter: drop-shadow(0 4px 15px var(--dropShadow));
+}
+
+.services-nav-btn.hidden {
+  display: none;
+}
+
+/* ----------------------------- */
+/* to-top-button
+/* ----------------------------- */
+
+button#to-top-btn {
+  position: fixed;
+  right: 7.29vw;
+  bottom: 100px;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(#aa80ff, #808cff);
+  border-radius: 8px;
+  bottom: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button#to-top-btn > span {
+  color: var(--white);
+}
+
+button#to-top-btn.hidden {
+  display: none;
+}
+
+.top-nav {
+  position: relative;
+}
+
+.top-nav > ul {
+  width: 685px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-nav #arrow-drop-down {
+  vertical-align: middle;
+  margin-top: -0.3em;
+}
+
+.top-nav #arrow-drop-down.dark {
+  color: var(--purpleHaze);
+}
+
+.dropdown-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  width: 395px;
+  background-color: var(--white);
+  left: 0;
+  top: 38px;
+  border-radius: 28px;
+  padding: 2.1rem 0;
+  align-items: center;
+  z-index: 10;
+}
+
+.dropdown-container.services {
+  border-radius: 0 0 28px 28px;
+}
+
+.dropdown-container.hidden {
+  display: none;
+}
+
+.dropdown-container a {
+  font-size: 2rem;
+  color: var(--purpleHaze);
+  font-family: "Novera-modern";
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.dropdown-container ul li:first-child a {
+  margin-top: 0;
+  color: #9b9b9b;
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+
+.dropdown-container ul li:last-child a {
+  margin-bottom: 0;
+}
+
+.dropdown-container #all-services-btn {
+  cursor: pointer;
+}
+
+/* add extra top so the hover covers this */
+.dropdown-container::before {
+  content: "";
+  height: 39px;
+  width: 100%;
+  position: absolute;
+  top: -19px;
+  left: 0;
+}
+
+/* hide not current images */
+.dropdown-container .dropdown-img.hidden {
+  display: none;
+}
+
+/* style selcted link */
+.dropdown-container a:hover {
+  opacity: 0.7;
+}
+
+/* style current link */
+.dropdown-container a.current {
+  opacity: 0.7;
+  cursor: default;
+}
+
+@media only screen and (max-width: 1366px) {
+  .dropdown-container {
+    width: 317px;
+  }
+
+  .dropdown-container img {
+    width: 70px;
+    height: auto;
+  }
+
+  .top-nav > ul {
+    width: 567px;
+  }
+}
+
+button#scroll-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+div#scroll-animation {
+    font-size: 1.6rem;
+  box-sizing: border-box;
+  /* em = 16px */
+  height: 3.31em;
+  width: 1.98em;
+  border: 0.1em solid #ffffff;
+  border-radius: 1em;
+  position: relative;
+  float: right;
+  margin-left: 1.13em;
+}
+div#scroll-animation::before {
+  position: absolute;
+  content: "";
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0.88em;
+  height: 0.56em;
+  width: 0.56em;
+  background-color: var(--white);
+  border-radius: 50%;
+  animation: move-down 2s infinite;
+}
+@keyframes move-down {
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(1em);
+    opacity: 0;
+  }
+}
+.spinner-1 {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: var(--purpleHaze) #0000;
+  animation: s1 1s infinite;
+}
+@keyframes s1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 0;
+}
+
+header img.logo {
+width: 30rem;
+}
+footer {
+  height: 326px;
+  padding: 77px 14.47vw 69px;
+  background-color: var(--purpleHaze);
+  display: flex;
+  justify-content: space-between;
+  font-family: "Novera-Modern";
+  box-sizing: border-box;
+}
+
+/* temporary fix for footer layout */
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100vh;
+}
+
+section#contact-section {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+img#footer-logo {
+  position: relative;
+  transform: translateY(-29px);
+}
+
+footer h5 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+footer li {
+  font-size: 1.7rem;
+  font-weight: normal;
+  line-height: 1.9em;
+}
+
+footer li a,
+footer li p {
+  color: var(--white);
+}
+
+footer li p {
+  display: inline-block;
+}
+
+footer li {
+  vertical-align: center;
+}
+
+footer #contact-container a {
+  display: flex;
+  align-items: center;
+}
+
+footer #contact-container p {
+  margin-left: 0.7em;
+}
+
+div.social {
+  margin-top: 25px;
+  float: right;
+  padding-left: 6.25vw;
+  padding-top: 25px;
+  border-top: 1px solid #f9f9f950;
+}
+
+div.social a:last-child {
+  margin-left: 11px;
+}
+
+ul#contact-container span,
+ul#contact-container img {
+  color: var(--blueHaze);
+}
+
+/* ------------- */
+/* home-section */
+/* ------------- */
+
+.home-section {
+  /* put everything in home section above webgl */
+  z-index: 1000;
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-section .intro {
+  text-align: center;
+}
+
+.home-section h2#subheading {
+  font-size: 2.8rem;
+  font-family: "Novera-Modern";
+  font-weight: 300;
+  line-height: 1.07;
+}
+
+div.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.clients {
+  width: 56.66vw;
+  height: 50px;
+  /* .clients {
+    width: 100px;
+    height: 40px;
+} */
+}
+
+.clients img {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  div.clients  {
+    /* width: 56.66vw; */
+    height: 40px;
+  }
+}
+
+
+
+/* ------------- */
+/* services-section */
+/* ------------- */
+
+#services-section h3 {
+  top: 0;
+}
+
+/* nav.services-navigation {
+  z-index: 1000;
+  position: absolute;
+  width: 30vw;
+  left: 50%;
+  top: 59%;
+  transform: translateX(-50%) translateY(-50%);
+} */
+
+/* position nav buttons */
+/* cant be in a container bc then they block the link underneath */
+
+/* 0.33 * 0.4 */
+
+button.services-nav-btn {
+  position: absolute;
+  z-index: 1000;
+  top: 59%;
+}
+
+button.services-nav-btn#next-item {
+  right: 37vw;
+  transform: translateX(50%)  ;
+}
+
+button.services-nav-btn#previous-item {
+  position: absolute;
+  left: 37vw;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+button.services-nav-btn > span {
+  vertical-align: middle;
+}
+
+nav.progress-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6.76vh;
+}
+
+.progress-dot {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--white);
+  border-image: none;
+  border-radius: 100%;
+  width: 1.2rem;
+  height: 1.2rem;
+
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.progress-dots .current {
+  background-color: var(--white);
+}
+
+.service-title {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  opacity: 75%;
+  color: inherit;
+  text-decoration: none;
+  left: 50%;
+  text-align: center;
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.service-title:hover {
+  opacity: 100%;
+}
+
+/*
+  .service-title:hover::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--white);
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      cursor: pointer;
+  }
+  */
+
+.current-service-title {
+  opacity: 100%;
+  font-size: 6rem;
+}
+
+/* ------------- */
+/* about-section */
+/* ------------- */
+section#about-section {
+  /* extra padding on the left = layout fix */
+  padding-left: 14.48vw;
+}
+
+#about-heading-container {
+  width: auto;
+}
+
+#about-section h2 {
+  text-align: left;
+  margin-top: 5vh;
+}
+
+#about-section h3 {
+  top: 55%;
+  right: 6%;
+  text-align: right;
+  color: var(--purpleHaze);
+}
+
+#about-section h4 {
+  margin: 1em 0;
+}
+
+div.pillars-container {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  bottom: 18vh;
+  position: absolute;
+}
+
+div.pillar-container {
+  width: 14.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+@media only screen and (max-height: 800px) {
+  div.pillars-container {
+    bottom: 10vh;
+  }
+
+  #about-section h2 {
+    margin-top: -5vh;
+  }
+}
+
+/* ------------- */
+/* general */
+/* ------------- */
+
+#contact-section {
+  z-index: 1000;
+  padding: 0 14.48vw;
+}
+
+#contact-section h2 {
+  color: #d5d0f9;
+  margin-top: 7vh;
+}
+
+#contact-section h3 {
+  top: -2%;
+  color: var(--purpleHaze);
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* absolute position requires giving the element a widht */
+  /* give it the widht of 100% minus the padding (the margin) */
+  width: calc(100% - 14.48vw - 14.48vw);
+  position: absolute;
+  bottom: 13vh;
+}
+
+/* ------------- */
+/* form */
+/* ------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 43.13vw;
+  padding-right: 15.21vw;
+  border-right: 1px solid #4a417450;
+  font-family: "Novera-Modern";
+  font-size: 1.7rem;
+  box-sizing: border-box;
+  /* z-index: 10000; */
+}
+
+/* pure css inputs 
+------------------------*/
+
+label {
+  color: var(--black);
+  margin-bottom: 4rem;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid var(--purpleHaze);
+  position: relative;
+}
+
+input {
+  width: 100%;
+  /* padding: 0.89em 0px; */
+  /* margin-top: 1.11em; */
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding-bottom: 0.2rem;
+  font-weight: bold;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--purpleHaze);
+}
+
+input::placeholder {
+  opacity: 0%;
+}
+
+span.floating-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-duration: 300ms;
+  font-weight: normal; /*400*/
+}
+
+/* floating label: floats and small */
+label:focus-within > span.floating-label,
+input:not(:placeholder-shown) + span.floating-label {
+  color: var(--purpleHaze);
+  transform: translateY(-2rem);
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* custom select 
+---------------------------*/
+
+div.select-container {
+  position: relative;
+  margin-bottom: 4rem;
+  margin-top: 1.5rem;
+}
+
+div.select-placeholder {
+  border-bottom: 1px solid var(--purpleHaze);
+  padding-bottom: 0.2em;
+  cursor: pointer;
+}
+
+p#placeholder-text {
+  /* font-family: "Novera-Modern"; */
+  font-weight: normal; /*400*/
+  color: var(--black);
+  display: inline-block;
+  /* font-size: 1.7rem; */
+}
+
+/* when placeholder is filled in by FormSelect.js */
+#placeholder-text.option-selected {
+  font-weight: bold;
+  color: var(--purpleHaze);
+  /* font-size: 1.7rem; */
+}
+
+/* arrow */
+div.select-placeholder > span {
+  font-size: 2.4rem;
+  float: right;
+  color: var(--purpleHaze);
+  vertical-align: middle;
+}
+
+div.select-options-container {
+  /* font-size: 1.7rem; */
+  background-color: white;
+  padding: 0.85em 1.25em;
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0 0 20px 20px;
+}
+
+/* removed and added with FormSelect.js */
+div.select-options-container.hidden {
+  display: none;
+}
+
+div.select-option {
+  color: var(--purpleHaze);
+  font-weight: bold;
+  margin: 0.75em 0;
+  cursor: pointer;
+  position: relative;
+}
+
+/* added and removed by FormSelect.js */
+div.select-option.selected::before {
+  content: "✔";
+  margin-right: 0.5em;
+}
+
+#select-floating-label {
+  top: -2rem;
+  color: var(--purpleHaze);
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* add and remove with FormSelect.js */
+#select-floating-label.hidden {
+  display: none;
+}
+
+/* textarea 
+----------------------*/
+
+textarea#message {
+  width: 100%;
+  border: none;
+  background: none;
+  height: 4rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  color: var(--purpleHaze);
+}
+
+textarea#message::placeholder {
+  font-weight: normal; /*400*/
+  color: var(--black);
+  /* font-size: 1.7rem; */
+}
+
+#message-floating-label {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  color: var(--purpleHaze);
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* added and removed by TextArea.js */
+#message-floating-label.hidden {
+  display: none;
+}
+
+/* submit 
+----------------------*/
+input#form-submit {
+  width: 260px;
+}
+
+/* ------------- */
+/* buttons */
+/* ------------- */
+
+.contact-btn-container {
+  width: 20.73vw;
+  box-sizing: border-box;
+  flex-grow: 0.7;
+  max-width: 380px;
+}
+
+.contact-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-btn:first-child {
+  margin-bottom: 4vw;
+}
+
+.contact-btn-text-container {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-btn-text-container h4 {
+  margin-bottom: 0.6em;
+}
+
+span.contact-btn-arrow {
+  color: var(--purpleHaze);
+}
+
+/* @media only screen and (max-width: 1920px) {
+  :root {
+    font-size: 50%
+  }
+} */
+
+@media only screen and (max-aspect-ratio: 1920 / 800) {
+  /* @media only screen and (max-height: 700px) { */
+  /* #contact-section h3 {
+    top: -22%;
+    font-size: 3vw;
+  } */
+}
+
+@media only screen and (max-height: 800px) {
+  .contact-wrapper {
+    bottom: 4vh;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  #contact-section h3 {
+    font-size: 20px;
+    top: 20px;
+  }
+  #contact-section.section-heading-container {
+    display: static;
+  }
+}
+
+/* ------------------ */
+/* loader */
+/* ------------------ */
+div#loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10000;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+}
+
+div#loader.hidden {
+  display: none;
+}
+
+div#loader img {
+  width: 250px;
+}
+
+.spinner-1 {
+  position: absolute;
+  bottom: 100px;
+}
+
+/* ------------------ */
+/* webgl */
+/* ------------------ */
+
+#webgl {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+/* ------------------ */
+/* sections-container.background */
+/* ------------------ */
+
+.background {
+  background-color: hsla(248, 66%, 82%, 1);
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsla(248, 100%, 68%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 69% 0%, hsla(248, 100%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 49% 100%, hsla(257, 100%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 96% 87%, hsla(232, 100%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 62%, hsla(214, 100%, 68%, 1) 0px, transparent 50%);
+}
+
+/* ------------------ */
+/* sections general */
+/* ------------------ */
+
+/* layout
+--------------------- */
+
+.sections-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -100;
+
+  /* left and right margin of whole page */
+  /* width: 85.42vw; */
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* margin left and right is padding so background is maintaind */
+  padding: 0 7.29vw;
+  box-sizing: border-box;
+}
+
+/* headings
+--------------------- */
+
+div.section-heading-container {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+h2.section-title {
+  /* font-size: 33.2rem; */
+  font-size: 17.645vw;
+  z-index: -10;
+  opacity: 50%;
+  color: var(--white);
+  margin-top: 16.2vh;
+  font-family: "Novera-Classic";
+  font-weight: 800; /* bold */
+  text-align: center;
+}
+
+h3.section-description {
+  font-size: 3.5vw;
+  position: absolute;
+  font-family: "Novera-Classic";
+  font-weight: bold;
+}
+
+/* ------------------ */
+/* gradient background */
+/* ------------------ */
+
+body#free-influencers.background {
+  background: linear-gradient(#cdc8ee, #F2F2F9);
+}
+
+/* ------------------ */
+/* gradient background */
+/* ------------------ */
+
+body#influencer-campaigns.background {
+  background: linear-gradient(#bfd0e7, #f2f6fa);
+}
+
+/* ------------------ */
+/* gradient background */
+/* ------------------ */
+
+body#event-management.background {
+  background: linear-gradient(#c3c7ee, #f3f3fa);
+}
+
+/* ------------------ */
+/* gradient background */
+/* ------------------ */
+
+body#growth-hacking.background {
+  background: linear-gradient(#cec3e9, #f4f2f9);
+}
+
+/* ------------------ */
+/* general */
+/* ------------------ */
+
+body.services {
+  /* padding: 0 7.29vw;; */
+}
+
+body.services h3 {
+  color: var(--purpleHaze);
+}
+
+/* ------------------ */
+/* header section */
+/* ------------------ */
+
+header.services-header {
+  padding: 1.8rem 7.29vw;
+  background-color: var(--white);
+  position: relative;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  /* z-index: 10; */
+}
+
+section.header-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.heading-container {
+  margin: 0 7.29vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  position: relative;
+  box-sizing: content-box;
+}
+
+h1.services-heading-1 {
+  font-size: 13vw;
+  /* z-index: -10; */
+  opacity: 50%;
+  color: var(--white);
+  font-family: "Novera-Classic";
+  font-weight: 800;
+  bottom: 23.6vh;
+  margin-bottom: 0;
+  line-height: 0.92em;
+}
+
+h1.services-heading-1 span {
+  font-size: calc(1em * 0.5);
+  line-height: calc(0.92em * 0.5);
+}
+
+div.subheader-container {
+  /* in order to place the image relative to this container */
+  position: relative;
+}
+
+img.main-icon {
+  position: absolute;
+  top: calc(-315px - 12em);
+  right: 0;
+}
+
+h3.image-before {
+  text-align: right;
+  font-size: 3.5vw;
+}
+
+/* ------------------ */
+/* main */
+/* ------------------ */
+
+main {
+  margin: 0 7.29vw;
+}
+
+div.info-container {
+  margin: 15rem 7.19vw 15rem;
+  position: relative;
+}
+
+div.info-container img.second-icon {
+  position: absolute;
+  left: -250px;
+  bottom: 0;
+}
+
+div.explainer-text {
+  max-width: 600px;
+  margin-bottom: 6rem;
+}
+
+div.explainer-text h4 {
+  color: var(--white);
+  font-family: "Novera-Classic";
+  font-weight: 800;
+  font-size: 6rem;
+  margin-bottom: 0.27em;
+}
+
+div.explainer-text h5 {
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: var(--purpleHaze);
+  line-height: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+div.explainer-text > p {
+  text-align: justify;
+}
+
+img.process {
+  display: block;
+  margin-left: auto;
+  width: 57vw;
+  height: auto;
+}
+
+/* ------------------ */
+/* table */
+/* ------------------ */
+table {
+  color: var(--purpleHaze);
+  table-layout: fixed;
+  margin: 0 auto;
+  margin-bottom: 20rem;
+  border-collapse: collapse;
+}
+
+table caption {
+  font-size: 6rem;
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  line-height: 1.17em;
+  margin-bottom: 8rem;
+  margin-left: 7.5%;
+  text-align: left;
+}
+
+table th {
+  font-family: "Novera-Classic";
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--purpleHaze);
+  /* the whole column will take widht of th */
+  /* width: calc(13.54vw + 1.6rem); */
+  width: 17%;
+}
+table th:first-child,
+table th:last-child {
+  width: 7.5%;
+}
+
+table th:not(.big) {
+  text-align: left;
+  padding-right: 0.8rem;
+}
+
+table th.big {
+  font-size: 2.8rem;
+  padding: 0.5em 0;
+}
+
+thead {
+  border-bottom: 1px solid #4a417420;
+}
+
+table td {
+  font-family: "Novera-Modern";
+  font-weight: normal;
+  height: 6rem;
+  text-align: center;
+  padding: 0 0.8rem;
+  width: calc(13.54vw + 1.6rem);
+}
+
+table div.social-img-container {
+  margin-bottom: 0.3rem;
+}
+
+table div.social-img-container img {
+  margin: 0 0.2rem;
+}
+
+table td p {
+  font-size: 1.2rem;
+}
+
+table tr:nth-child(2) {
+  font-size: 1.6rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f950;
+}
+
+col.highlighted {
+  background-color: #4a417425;
+}
+
+/* th#current {
+  background-color: #ebeaf9;
+} */
+
+tbody tr:first-child td,
+tbody tr:first-child th {
+  padding-top: 3rem;
+}
+
+.check {
+  color: rgb(15, 128, 0);
+}
+/* ------------------ */
+/* footer overwrite  */
+/* ------------------ */
+
+footer.services-footer {
+  position: static;
+}
+
+body#privacy-policy main {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+body#privacy-policy div.container {
+max-width: 600px;
+/* dissable margin collapse */
+display: flex;
+flex-direction: column;
+}
+
+body#privacy-policy div.privacy-section {
+    border-bottom: 1px solid #4a417420;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+body#privacy-policy h1 {
+    font-family: "Novera-Classic";
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 77%;
+    margin-bottom: 1em;
+    color: var(--purpleHaze);
+}
+
+body#privacy-policy h2 {
+    font-family: "Novera-Classic";
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 77%;
+    margin: 0.8em 0 0.5em;
+    color: var(--purpleHaze);
+}
+
+body#privacy-policy h3 {
+    font-family: "Novera-Classic";
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 77%;
+    margin: 2em 0 0.5em;
+    color: var(--purpleHaze);
+}
+
+body#privacy-policy span.bold {
+    font-weight: bold;
+    color: var(--purpleHaze);
+}
+
+body#privacy-policy a#mail-legal {
+    color: var(--purpleHaze);
+    text-decoration: underline;
+}
+
+body#privacy-policy footer {
+position: static;
+}
+
+/* Base: 
+--------------------------------*/
+/* all basic settings throughout the whole page */
+/* fonts, headings, ... */
+
+/* components: 
+--------------------------------*/
+/* Ui components */
+/* buttons, ... */
+
+/* layout: 
+--------------------------------*/
+/* subdivision of the page, this comes back on multiple pages */
+/* this decides a big part of the layout on each page */
+/* grid, header, footer, ... */
+
+/* pages: 
+--------------------------------*/
+/* longest css pages, structure chronologically according to html */
+/* grid, header, footer, ... */
+
+
+/*# sourceMappingURL=main.css.map*/
