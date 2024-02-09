@@ -39,7 +39,7 @@ export default class Resources extends EventEmitter {
     this.loaders = {};
     this.loaders.gltfLoader = new GLTFLoader(this.loadingManager);
     const dracoLoader = new DRACOLoader(this.loadingManager);
-    dracoLoader.setDecoderPath("/draco/");
+    dracoLoader.setDecoderPath("./draco/");
     this.loaders.gltfLoader.setDRACOLoader(dracoLoader);
     this.loaders.textureLoader = new THREE.TextureLoader(this.loadingManager);
     this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader(
@@ -68,9 +68,6 @@ export default class Resources extends EventEmitter {
 
   // if loaded all in sources.js trigger event - World.js is listening
   sourceLoaded(source, file) {
-    if (source.type === "gltfModel") {
-      // console.log(`Resources loaded: ${source.name}`, file);
-    }
     this.items[source.name] = file;
 
     this.loaded++;
